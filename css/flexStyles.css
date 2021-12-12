@@ -1,0 +1,177 @@
+/* for the whole page  */
+* {
+  box-sizing: border-box;
+}
+/* div with background image for header and main content  */
+.bgImgContainer {
+  background-image: url("/images/bg-img.jpg");
+  background-size: cover;
+  margin: 0%;
+  color: white;
+  background-repeat: no-repeat;
+  --contentheight: 700px;
+}
+/* 1st container that ve logo and menu */
+.container1 {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+/* website name or logo */
+
+.container1 h1 {
+  text-align: left;
+  margin-left: 5%;
+  flex: 1;
+}
+/* main menu with  list items and baricons thats gonna display on mobile version */
+
+.mainMenu {
+  flex: 2;
+  text-align: right;
+  margin-right: 5%;
+}
+
+.container1 li {
+  display: inline;
+  list-style: none;
+  margin: 5%;
+  font-size: 1.5rem;
+}
+.barIcons {
+  display: none;
+}
+/* container 2 consist of main content and two buttons, container 2 also wrap in a div with background image */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  max-height: var(--contentheight);
+}
+.mainContent {
+  text-align: center;
+  margin: 5%;
+  /* background-color: brown; */
+  height: 350px;
+}
+.mainContent p {
+  margin: 10% 10% 0 10%;
+  line-height: 1.5rem;
+  text-align: center;
+  overflow: auto;
+}
+.mainButtons {
+  /* background-color: blueviolet;*/
+  margin-bottom: 5%;
+}
+
+/* button styling for two buttons */
+button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: red;
+}
+.whiteButton {
+  background-color: transparent;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.whiteButton:hover {
+  background-color: #e7e7e7;
+}
+
+.blackButton {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.blackButton:hover {
+  background-color: black;
+  color: white;
+}
+/* container three consist of heading and three cards */
+
+.container3 h1 {
+  text-align: center;
+}
+/* div that contain three cards */
+.cardFbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5%;
+}
+.card {
+  flex-basis: 30%;
+  text-align: center;
+  padding: 3%;
+  border: 1px black solid;
+}
+.card p {
+  text-align: justify;
+}
+
+/* footer container with 2 div */
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 5%;
+  background-color: rgb(0, 0, 0, 0.8);
+  align-content: center;
+}
+
+/* color for social media icons */
+.fbIcons {
+  color: #8a3ab9;
+}
+.lnkIcons {
+  color: #0e76a8;
+}
+
+.twtIcons {
+  color: #00acee;
+}
+.copyR {
+  color: white;
+  font-style: italic;
+}
+/* for devices width less than 600 px  */
+@media (max-width: 600px) {
+  ul {
+    display: none;
+  }
+
+  .cardFbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin: 5%;
+  }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    padding: 1% 5%;
+    background-color: rgb(0, 0, 0, 0.8);
+    align-content: center;
+  }
+  .barIcons {
+    color: white;
+    display: block;
+    margin: 10%;
+  }
+}
